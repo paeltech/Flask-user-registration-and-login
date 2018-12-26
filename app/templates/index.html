@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style="text-transform: capitalize;">Hello {{current_user.username}}</h1>
+{% for user in users %}
+<p style="color: #bbb;">
+    <strong style="text-transform: capitalize; color: #3d3d3d;">{{ user.username }}</strong> {{ user.email }}
+</p>
+{% endfor %}
+{% endblock %}
